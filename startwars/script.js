@@ -35,9 +35,16 @@ const GetPerson = async () =>{
 
 
 
-Button.addEventListener('click', async (e) =>{
+
+
+Button.addEventListener('click', async (e) => {
     e.preventDefault();
     GetPerson();
-} )
+})
 
-
+inputText.addEventListener("keyup", async (event) =>{
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    GetPerson();
+  }
+});
